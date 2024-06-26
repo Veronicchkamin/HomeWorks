@@ -1,6 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-Console.WriteLine("Me in develop branch!");
-Console.WriteLine("Today is sunny");
-
+Console.WriteLine("Who arey you?");
