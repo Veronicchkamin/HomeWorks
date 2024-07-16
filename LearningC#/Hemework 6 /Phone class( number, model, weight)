@@ -1,0 +1,45 @@
+
+Phone phone = new Phone();
+Phone phone1 = new Phone("+12345674", "Samsung", 5);
+Phone phone2 = new Phone("+4653765", "iPhone");
+
+Console.WriteLine(phone2.GetNumber());
+Console.WriteLine(phone1.GetNumber());
+Console.WriteLine(phone.GetNumber());
+
+phone1.ReceiveCall("Adam");
+
+Console.ReadLine();
+
+public class Phone
+{
+    string Number;
+    string Model;
+    float  Weight;
+
+    public Phone() { Number = "Unknown number"; Model = "Unknown model"; Weight = 0; }
+    public Phone ( string userNumber, string userModel )
+    {
+        Number = userNumber;
+        Model = userModel;
+        Weight = 0;
+    }
+    public Phone (string userNumber, string userModel, float phoneWeight)
+    {
+        Number = userNumber;
+        Model = userModel;
+        Weight = phoneWeight;
+    }
+
+    public void ReceiveCall( string Name )
+    {
+        Console.WriteLine($"{Name} calls");
+    }
+
+    public string GetNumber ()
+    {
+        return this.Number;
+    }
+
+}
+
